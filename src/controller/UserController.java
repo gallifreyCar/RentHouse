@@ -34,8 +34,10 @@ public class UserController {
 			if(user1.getType().equals("zuke")){
 				return "redirect:houselist.action";
 			}
-			else{
+			else if (user1.getType().equals("admin")){
 				return "redirect:ahouselist.action";
+			}else {
+				return "redirect:bhouselist.action";
 			}
 		}else{
 			String error="error";
